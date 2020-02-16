@@ -19,7 +19,7 @@
                         <router-link to=""  class="nav-link" >{{ $i18n.t('layout.footer.whyUs') }}</router-link>
                         <router-link to="" class="nav-link" >{{ $i18n.t('layout.footer.security') }}</router-link>
                         <router-link class="nav-link" to="/faq">{{ $i18n.t('global.faq') }}</router-link>
-                        <router-link class="nav-link" to="/faq">{{ $i18n.t('layout.footer.termsAndConditions') }}</router-link>
+                        <router-link class="nav-link" to="/tos">{{ $i18n.t('layout.footer.termsAndConditions') }}</router-link>
                     </div>
                 </div>
 

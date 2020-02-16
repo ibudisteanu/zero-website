@@ -155,6 +155,17 @@ export default {
             answerRingSignatureUntraceable: `${config.app.name} uses Confidential Ring Signatures (like in Monero) meaning that the amounts are hidden (confidential) and a transaction uses random decoys from the network (a ring transaction).`,
         },
 
+        404:{
+            notFound: '404 - page not found'
+        },
+
+        tos:{
+            tos: "Terms of Service",
+            description: "Please read these Terms of Service (\"Terms\", \"Terms of Service\") carefully before using PandoraPay operated by a decentralized peer to peer network. \n" +
+            "\n" +
+            "Your access to and use of the Service is conditioned on your acceptance of an compliance with these Terms. These terms apply to all visitors, users and others who access or use the Service."
+        }
+
     },
 
     layout:{
