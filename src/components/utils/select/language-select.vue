@@ -8,7 +8,7 @@
                     <div class="triangle"></div>
                     <ul>
                         <li v-for="(lang, index) in languages" @click="selectLanguage(lang)">
-                            <i :class="`sl-flag flag-${lang.short}`"></i>
+                            <i :class="`sl-flag flag flag-${lang.short}`"></i>
                             <span class="active">{{lang.text}}</span>
                         </li>
                     </ul>
@@ -34,7 +34,19 @@ export default {
                 ro: {
                     short: "ro",
                     text: "Română",
-                }
+                },
+                it: {
+                    short: "it",
+                    text: "Italiano",
+                },
+                es: {
+                    short: "es",
+                    text: "Español",
+                },
+                de: {
+                    short: "de",
+                    text: "Deutsch",
+                },
             }
 
         }
@@ -150,21 +162,28 @@ export default {
         top: 2px;
         overflow: hidden;
     }
-    .flag-de {
-        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAAAPUlEQVQ4T+3HMQ0AIBTE0NOHM8x9B7hgh71bIWGieUvze1m7kHGBr/AVvsJX+EpmP5dV5/gKX+ErfIUvVDYcX2NMxQC8PAAAAABJRU5ErkJggg==');
+
+    .flag{
         background-size: cover;
         background-position: center center;
     }
+    .flag-de {
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAAAPUlEQVQ4T+3HMQ0AIBTE0NOHM8x9B7hgh71bIWGieUvze1m7kHGBr/AVvsJX+EpmP5dV5/gKX+ErfIUvVDYcX2NMxQC8PAAAAABJRU5ErkJggg==');
+    }
     .flag-en {
-        background-size: cover;
-        background-position: center center;
         background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAIAAAAC64paAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAABhUlEQVQ4T2Ows82PjGixsc4LD2tysC/09Kjw8622tyuICG8u0w/cpGSCBzF4e1VmZkzw9anOzOj38a4KCW4IC22ECHYk1l9tn4gHMeTlTnZxLikvm+XiUpKW2hvgX+vnV5OVOQEoOGfOtv94AYOzU3Fd7XxHh6Lq6rlurqUx0W0J8Z1AnbW18yotonaYuOJBDBXls4A+bGpaBCTz86YEBtQCvVBSPAPIbY0oP1/aiAcxABU1Ny+2tclvbFjo5FgUF9uenNwNDLnmpkWEnV1TPRcY1O1tS4H6i4umA/0MDK2K8tlAwRqHpP1uoXgQKKraWpcClTY3LQZaCLQ5NaUX5OaWJY3++SeTC/AgBmA4AXUClUJs9ver8fKsAAYEUJCws4G21dXNB1oFdD/Qz8DQTk4C+bm2dn6DZ9bRiDQ8iAEYt8CoBpK5YBIYw0AEEZwSXX4oMB4PYoC6gCzAcDqrjGzEsMfen2xEmbMv1rSTjRi26dqRjShz9o2+6WQjBrSShQSkZAIADvW/HLrLY6cAAAAASUVORK5CYII=');
     }
 
     .flag-ro {
-        background-size: cover;
-        background-position: center center;
         background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAAUElEQVQ4T2MU0c+Z/p+BIYMBCWwPnILMhbM/NKIKc7Cw7mEU1s/5r2gShyJzPMsXqwEvAlhRxK8/ecIwasBoGFAnHYjo58z8z8CQRmZS3gsAtBFaYGlhP7YAAAAASUVORK5CYII=');
+    }
+
+    .flag-it {
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAAUUlEQVQ4T2NkqPKazsDAkMGABJrEg5G5cLZmfhaK+H8GhlmMDFVe//XNdFEkjnm0YDXgv7c/ivj2vXsZRg0YDQNqpQPPmQwMjGnkJGUGBobZAEtLVo37EG2TAAAAAElFTkSuQmCC');
+    }
+
+    .flag-es {
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAMCAYAAABr5z2BAAAA9ElEQVQ4T2PsY2Y48p+BwZqBPHCMsZeZ4X+RjiZZ2vuuXGeg3IBTDQz/TUMswS64fvMPw8//ggzP3oky8HD+ZuDi+M0gIfiRQUbiO1YXnl5znIER2QCG/wwMB3ZbMqjNWsPAuvcQw4Nr+xhMpJYxMP7/SpwBF26JMYgZtDHw33nI8DEvg+Hb6uUM3x4tYtCTv0ScAYcuyDAomFUxnN63muHfg/sMkrYhDF+frmJwt3pEnAE/frIwvPjtznDm+DkGUREWBmV1DQYJjsMMLEw/iDMApurPHyYGFpZ/BKMWHIgDnw56mRmOMjAwWBF0LxYFjAwMxwHj5XGr1M6PtQAAAABJRU5ErkJggg==');
     }
 
 </style>

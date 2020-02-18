@@ -116,9 +116,9 @@ function render (req, res) {
   }
   
   renderer.renderToString(context, (err, html) => {
-    if (err) {
+    if (err)
       return handleError(err)
-    }
+
     res.send(html)
     if (!isProd) {
       console.log(`whole request: ${Date.now() - s}ms`)
@@ -128,9 +128,10 @@ function render (req, res) {
 
 app.get('*', isProd ? render : (req, res) => {
   readyPromise.then(() => render(req, res))
-})
+});
 
 const port = process.env.PORT || config.port;
+
 app.listen(port, () => {
   console.log(`server started at localhost:${port}`)
-})
+});

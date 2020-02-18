@@ -6,18 +6,18 @@
             <div class="navbar-left">
                 <button class="navbar-toggler" type="button"><span class="navbar-toggler-icon"></span></button>
                 <router-link class="navbar-brand" to="/">
-                    <img class="logo-dark" src="/public/assets/images/pandora-pay-logo-inline.png" alt="logo">
-                    <img class="logo-light" src="/public/assets/images/pandora-pay-logo-inline-white.png" alt="logo">
+                    <img class="logo-dark" src="/public/assets/images/pandora-pay-logo-inline.png" :alt="$i18n.t('layout.navbar.logoAlt')">
+                    <img class="logo-light" src="/public/assets/images/pandora-pay-logo-inline-white.png" :alt="$i18n.t('layout.navbar.logoAlt')">
                 </router-link>
             </div>
 
             <section class="navbar-mobile">
                 <nav class="nav nav-navbar ml-auto">
-                    <router-link class="nav-link" to="/">Home</router-link>
-                    <a class="nav-link" :href="config.explorer">Block Explorer</a>
-                    <a class="nav-link" :href="config.wallet">Web Wallet</a>
-                    <router-link class="nav-link" to="/contact">Contact</router-link>
-                    <router-link class="nav-link" to="/faq">FAQ</router-link>
+                    <router-link class="nav-link" to="/">{{ $i18n.t('layout.navbar.home') }}</router-link>
+                    <a class="nav-link" :href="config.explorer">{{ $i18n.t('global.explorer') }}</a>
+                    <a class="nav-link" :href="config.wallet">{{ $i18n.t('global.webWallet') }}</a>
+                    <router-link class="nav-link" to="/contact">{{ $i18n.t('layout.navbar.contact') }}</router-link>
+                    <router-link class="nav-link" to="/faq">{{ $i18n.t('global.faq') }}</router-link>
                     <language-select class="nav-link"/>
                 </nav>
             </section>

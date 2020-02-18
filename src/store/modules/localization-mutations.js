@@ -34,7 +34,35 @@ export default {
 
     SET_LOCALIZATION_SELECTED_LANGUAGE: (state, {  language }) => {
 
-        if ( ['ro','en'].indexOf(language) < 0){
+        const replaces = {
+            'md': 'ro',
+            'mx': 'es',
+            'co': 'es',
+            'ar': 'es',
+            'pe': 'es',
+            've': 'es',
+            'cl': 'es',
+            'ec': 'es',
+            'gt': 'es',
+            'cu': 'es',
+            'bo': 'es',
+            'hn': 'es',
+            'do': 'es',
+            'py': 'es',
+            'sv': 'es',
+            'ni': 'es',
+            'cr': 'es',
+            'pa': 'es',
+            'uy': 'es',
+            'gq': 'es',
+            'pr': 'es',
+            'at': 'de',
+            'ch': 'de',
+        };
+
+        if (replaces[language]) language = replaces[language];
+
+        if ( ['ro','en','it','es', 'de'].indexOf(language) < 0){
             language = 'en';
         }
 

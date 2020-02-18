@@ -1,6 +1,7 @@
-# Zero Website
+# PandoraPay Website
 
-Just the landing page for Zero
+Just the landing page for PandoraPay
+Developed with Server Side Rendering (SSR) in Vue2.js
 
 ## Requirements
 
